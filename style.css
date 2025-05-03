@@ -1,60 +1,128 @@
-
+/* تعيين الخطوط العامة */
 body {
   font-family: 'Arial', sans-serif;
   direction: rtl;
   text-align: right;
-  background-color: #f0f0f0;
+  background-color: #f4f7f6;
   margin: 0;
   padding: 0;
 }
 
+/* تصميم الهيدر */
 header {
-  background-color: #005f73;
+  background-color: #2a9d8f;
   color: white;
-  padding: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   margin: 0;
+  font-size: 32px;
+  font-weight: bold;
 }
 
+/* الروابط */
 nav a {
   color: white;
-  margin-left: 15px;
+  margin: 0 15px;
   text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: #e9c46a;
 }
 
+/* محتوى الصفحة */
 section {
-  margin: 20px;
-  background-color: #ffffff;
+  margin: 30px auto;
   padding: 20px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
 }
 
+/* التنسيق للمدخلات */
+input, select, button {
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: #2a9d8f;
+}
+
+/* أزرار */
 button {
-  background-color: #0077b6;
+  background-color: #2a9d8f;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #023e8a;
+  background-color: #264e3b;
 }
 
-input, select {
-  padding: 8px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+/* النتيجة بعد إجراء النقل */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1faee;
+  border: 1px solid #a8dadc;
+  border-radius: 8px;
+  color: #2a9d8f;
+  font-weight: bold;
+  display: none;
+}
+
+/* التنسيق للزر تحميل السجلات */
+#downloadExcel {
+  background-color: #e9c46a;
+  color: #264e3b;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
   width: 100%;
-  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+#downloadExcel:hover {
+  background-color: #f4a261;
+}
+
+input[type="text"] {
+  width: 70%;
+  margin-right: 15px;
+}
+
+input[type="text"], select {
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
