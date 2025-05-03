@@ -46,15 +46,22 @@ function generateUniqueCode() {
 }
 
 document.getElementById("downloadExcel").addEventListener("click", function() {
+  // البيانات التي سيتم تضمينها في ملف CSV
   let csvContent = "رقم العملة,المبلغ,المالك الحالي,رقم الهوية\n";
   
+  // التكرار على البيانات الخاصة بالعملات
   currencyData.forEach(currency => {
     csvContent += `${currency.serial},${currency.amount},${currency.owner},${currency.id}\n`;
   });
 
+  // إنشاء Blob من النص
   const blob = new Blob([csvContent], { type: 'text/csv' });
+  
+  // إنشاء رابط للتحميل
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "العمليات.csv";
+  link.download = "العمليات.csv"; // اسم الملف عند التحميل
+  
+  // تفعيل الرابط لتحميل الملف
   link.click();
 });
