@@ -6,7 +6,8 @@ document.getElementById("transferForm").addEventListener("submit", async functio
   const currency = currencyData.find(c => c.serial === serial);
 
   if (!currency) {
-    document.getElementById("result").textContent = "العملة غير موجودة.";
+    // عرض رسالة تحذير إذا كانت العملة غير موجودة
+    document.getElementById("result").textContent = "العملة غير موجودة في النظام. من فضلك تحقق من الرقم التسلسلي.";
     return;
   }
 
@@ -45,12 +46,10 @@ function generateUniqueCode() {
 }
 
 document.getElementById("downloadExcel").addEventListener("click", function() {
-  let csvContent = "رقم العملة,المبلغ,المالك الحالي,رقم الهوية
-";
+  let csvContent = "رقم العملة,المبلغ,المالك الحالي,رقم الهوية\n";
   
   currencyData.forEach(currency => {
-    csvContent += `${currency.serial},${currency.amount},${currency.owner},${currency.id}
-`;
+    csvContent += `${currency.serial},${currency.amount},${currency.owner},${currency.id}\n`;
   });
 
   const blob = new Blob([csvContent], { type: 'text/csv' });
