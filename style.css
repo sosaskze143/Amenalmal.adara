@@ -126,3 +126,26 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* تنسيق النص في الصفحة الرئيسية */
+#welcome {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#welcome h2 {
+  font-size: 26px;
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
+#welcome p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+}
